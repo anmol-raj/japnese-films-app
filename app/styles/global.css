@@ -1,0 +1,62 @@
+/* html {
+  font-family: 'Baikal';
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Baikal'; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: "2px";
+  color: #3a3a3a;
+  overflow-x: hidden;
+}
+
+/* code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  } */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* @font-face {
+    font-family: 'Baikal';
+    src: url('../assets/fonts/Baikal-VF-subset.woff2') format('woff2'),
+      url('../assets/fonts/Baikal-VF-subset.woff') format('woff');
+    unicode-range: U+A, U+20-22, U+25-50, U+52-57, U+59, U+5A, U+5F, U+61-7A, U+A9,
+      U+2019, U+20B9;
+    font-weight: 100 1000;
+    font-stretch: 25% 200%;
+    font-display: swap;
+    font-family: 'Baikal';
+  } */
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8f8f8f;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+    background-color: transparent;
+  } */
