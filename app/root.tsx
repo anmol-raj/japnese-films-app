@@ -8,6 +8,8 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import styles from "~/styles/global.css";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { getTheme } from "@tyke-invest/ui-library-v2";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -33,7 +35,10 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <ThemeProvider theme={getTheme("light")}>
+          <Outlet />
+          <CssBaseline />
+        </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
