@@ -1,6 +1,11 @@
 import { Typography } from "@mui/material";
-import type { LoaderFunction, MetaFunction } from "@remix-run/node";
+import type {
+  LinksFunction,
+  LoaderFunction,
+  MetaFunction,
+} from "@remix-run/node";
 import { Meta, useLoaderData } from "@remix-run/react";
+import styles from "~/styles/global.css";
 
 // export const meta: MetaFunction = () => {
 //   return {
@@ -8,6 +13,16 @@ import { Meta, useLoaderData } from "@remix-run/react";
 //     description: "Japanese Movies app..",
 //   };
 // };
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: styles,
+    },
+  ];
+};
+
 export const loader: LoaderFunction = () => {
   return { message: "Homepage..." };
 };
@@ -15,13 +30,8 @@ export const loader: LoaderFunction = () => {
 export default function Index() {
   const data = useLoaderData();
   return (
-    <>
-      {/* <head>
-        <Meta />
-      </head> */}
-      <div>
-        <Typography variant="h3">{data.message}</Typography>
-      </div>
-    </>
+    <div>
+      <Typography variant="h3">{data.message}</Typography>
+    </div>
   );
 }

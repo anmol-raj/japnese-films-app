@@ -31,7 +31,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 export default function FilmsPage() {
   const films = useLoaderData<Film[]>();
   return (
-    <>
+    <div>
       {/* <head>
         <Meta />
       </head> */}
@@ -96,6 +96,6 @@ export default function FilmsPage() {
           ))}
         </Grid>
       </Box>
-    </>
+    </div>
   );
 }

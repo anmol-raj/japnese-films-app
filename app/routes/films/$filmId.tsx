@@ -9,8 +9,8 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 export default function Film() {
   return (
-    <>
+    <div>
       <Typography>I am Film</Typography>
-    </>
+    </div>
   );
 }
